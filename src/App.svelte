@@ -1,26 +1,35 @@
 <script lang="ts">
   export let name: string;
-  import Navigation from "./components/Navigation/Navigation.svelte";
+  import Navigation from "./components/Navigation.svelte";
+  import Section from "./components/Section.svelte";
+  import ProjectCard from "./components/ProjectCard.svelte";
 </script>
 
-<div class="container">
-  <Navigation />
-  <main>
-    <section class="bg-red">Illustration</section>
-    <section>Projects</section>
-    <section>Blog</section>
-    <section>Contact</section>
-  </main>
+<div
+  class="font-mono w-screen p-12 min-h-screen bg-gray-900 text-gray-50 flex items-stretch"
+>
+  <div class="container flex mx-auto items-stretch">
+    <Navigation />
+    <main class="flex-auto overflow-y-auto max-h-screen">
+      <Section>
+        <h1>Illustration</h1>
+      </Section>
+      <Section>
+        <h1>Projects</h1>
+        <ProjectCard title="beta" />
+        <ProjectCard title="Stolen Paragliders" />
+        <ProjectCard title="Aloys' dev" />
+        <ProjectCard title="Doctofiche" />
+      </Section>
+      <Section>
+        <h1>Blog</h1>
+      </Section>
+      <Section>
+        <h1>Contact</h1>
+      </Section>
+    </main>
+  </div>
 </div>
-
-<svelte:head>
-  <!-- :root vars, credits to mjgarten#1939 -->
-  <style>
-    :root {
-      --heading-border-color: yellow;
-    }
-  </style>
-</svelte:head>
 
 <style>
   :root {
@@ -29,26 +38,6 @@
     --color-light: #f3f2f3;
     --color-lightgray: #9c9a9e;
     --color-gray: #202022;
-  }
-
-  .container {
-    display: flex;
-    background-color: var(--color-darkest);
-    color: var(--color-light);
-    box-sizing: border-box;
-  }
-
-  main {
-    flex: 1 1 auto;
-    overflow: scroll;
-    max-height: 100vh;
-  }
-
-  section {
-    height: 95vh;
-    border: 5px solid red;
-    background-color: var(--color-gray);
-    margin: 2em;
   }
 
   @media (min-width: 640px) {
