@@ -6,7 +6,7 @@
 <div class="container">
   <Navigation />
   <main>
-    <section>Illustration</section>
+    <section class="bg-red">Illustration</section>
     <section>Projects</section>
     <section>Blog</section>
     <section>Contact</section>
