@@ -1,18 +1,23 @@
 <script lang="ts">
-  export let name: string;
   import Navigation from "./components/Navigation.svelte";
   import Section from "./components/Section.svelte";
   import ProjectCard from "./components/ProjectCard.svelte";
+  import Illustration from "./static/undraw_code_thinking.svelte";
 </script>
 
-<div
-  class="font-mono w-screen p-12 min-h-screen bg-gray-900 text-gray-50 flex items-stretch"
->
-  <div class="container flex mx-auto items-stretch">
+<div class="font-mono w-screen min-h-screen bg-gray-900 text-gray-50 flex items-stretch">
+  <div class="container flex  items-stretch">
     <Navigation />
     <main class="flex-auto overflow-y-auto max-h-screen">
-      <Section>
-        <h1>Illustration</h1>
+      <Section id="home">
+        <Illustration />
+        <h1>You have an app idea but you do not know how to make it come to life ?</h1>
+        <h1>You have a digital project but you are lost in the technical terms ?</h1>
+        <h1>
+          Or you simply need a website for your business to improve your online presence ?
+        </h1>
+        <h1>Let me help!</h1>
+        <span>Sroll to see my work</span>
       </Section>
       <Section>
         <h1>Projects</h1>
@@ -26,6 +31,20 @@
       </Section>
       <Section>
         <h1>Contact</h1>
+        <form>
+          <input type="email" required placeholder="my@email.com" />
+          <input type="text" placeholder="My name" />
+          <input
+            type="text"
+            required
+            placeholder="
+            I need a booking website for my business, I have this idea of a mobile
+            application, I am struggling to manage my existing website, I have a
+            question...
+	"
+          />
+          <button>Submit</button>
+        </form>
       </Section>
     </main>
   </div>
