@@ -1,7 +1,7 @@
 <div class="flex-initial px-12 w-1/3 flex-col flex justify-around">
   <div>
-    <label><input id="theme" type="radio" />Dark theme</label>
-    <label><input id="theme" type="radio" />Light theme</label>
+    <label><input name="theme" type="radio" />Dark theme</label>
+    <label><input name="theme" type="radio" />Light theme</label>
   </div>
   <div class="flex items-center flex-col justify-center flex-intial">
     <img class="bg-gray-300 my-12 rounded-full h-48 w-48" />
