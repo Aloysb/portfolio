@@ -2,15 +2,18 @@
   import Navigation from "./components/Navigation.svelte";
   import Section from "./components/Section.svelte";
   import ProjectCard from "./components/ProjectCard.svelte";
+  import Contact from "./components/Contact.svelte";
   import Illustration from "./static/undraw_code_thinking.svelte";
 </script>
 
 <div class="font-mono w-screen min-h-screen bg-gray-900 text-gray-50 flex items-stretch">
-  <div class="container flex  items-stretch">
-    <Navigation />
-    <main class="flex-auto overflow-y-auto max-h-screen">
-      <Section id="home">
-        <Illustration />
+  <Navigation />
+  <main class="flex-auto overflow-y-auto max-h-screen">
+    <Section id="home">
+      <div class="flex flex-col items-center justify-around ">
+        <div class="bg-green-500 rounded-full h-96 w-96 flex bg-opacity-75">
+          <Illustration />
+        </div>
         <h1>You have an app idea but you do not know how to make it come to life ?</h1>
         <h1>You have a digital project but you are lost in the technical terms ?</h1>
         <h1>
@@ -18,36 +21,24 @@
         </h1>
         <h1>Let me help!</h1>
         <span>Sroll to see my work</span>
-      </Section>
-      <Section>
-        <h1>Projects</h1>
-        <ProjectCard title="beta" />
+      </div>
+    </Section>
+    <Section>
+      <h1>Projects</h1>
+      <div class="flex flex-col justify-around items-stretch">
+        <ProjectCard title="Beta" />
         <ProjectCard title="Stolen Paragliders" />
-        <ProjectCard title="Aloys' dev" />
+        <ProjectCard title="FFVL Quizz" />
         <ProjectCard title="Doctofiche" />
-      </Section>
-      <Section>
-        <h1>Blog</h1>
-      </Section>
-      <Section>
-        <h1>Contact</h1>
-        <form>
-          <input type="email" required placeholder="my@email.com" />
-          <input type="text" placeholder="My name" />
-          <input
-            type="text"
-            required
-            placeholder="
-            I need a booking website for my business, I have this idea of a mobile
-            application, I am struggling to manage my existing website, I have a
-            question...
-	"
-          />
-          <button>Submit</button>
-        </form>
-      </Section>
-    </main>
-  </div>
+      </div>
+    </Section>
+    <Section>
+      <h1>Blog</h1>
+    </Section>
+    <Section>
+      <Contact />
+    </Section>
+  </main>
 </div>
 
 <style>
